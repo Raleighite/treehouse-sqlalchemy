@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
 *.db
 *.db-journal
 *.sqlite3
@@ -11,7 +10,3 @@ __pycache__/
 venv/
 env/
 .venv/
-*.egg-info/
-dist/
-build/
-.pytest_cache/
