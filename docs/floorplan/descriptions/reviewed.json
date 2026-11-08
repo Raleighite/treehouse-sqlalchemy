@@ -1,0 +1,21 @@
+{
+  "files": {
+    "app.py": {
+      "name": "Interactive book catalog",
+      "description": "Normalizes dates, prices into integer cents and selected IDs; imports CSV titles with deduplication; offers add/list/ID lookup/edit/delete and oldest/newest/count analysis in terminal menus. Main creates tables, imports suggestions and enters the loop."
+    },
+    "models.py": {
+      "name": "Book mapping and SQLite session",
+      "description": "Creates SQLAlchemy engine/session and declarative Book fields for title, author, publication date and integer-cent price. No application import or database access was performed."
+    },
+    "README.md": {
+      "name": "Course project overview",
+      "description": "Describes the SQLAlchemy books exercise and provides running instructions; this map instead inspects source without running it."
+    },
+    "LICENSE": {
+      "name": "Original project license",
+      "description": "Preserves upstream licensing, separate from the bundled map renderer notices."
+    }
+  },
+  "routes": {}
+}

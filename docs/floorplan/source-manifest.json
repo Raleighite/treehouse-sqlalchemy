@@ -1,0 +1,44 @@
+{
+  "schema": "floorplan/source-manifest@1",
+  "repository": "Raleighite/treehouse-sqlalchemy",
+  "source_commit": "6d03f8edebd32fbf35406c58bc80f4ad16b45bbe",
+  "mapping_source": "original bytes; no credential derivative",
+  "source_policy": "See checker selected(): application Python/JS/HTML/CSS and actual config/static/template/input classes, excluding docs/policy/tests/dependencies/caches.",
+  "source_files": {
+    "app.py": "11ce7ccdeebe9e26d6e51e164ab93ad4f1e4a19e1dde561d81e168a12d9ceb75",
+    "models.py": "c13c4f0506c0a98d20726a0cfeec4323fbf2849a83734f491053553112f314fb",
+    "requirements.txt": "5bfe140e877c00c150e041b486b56220ff5d78639c955933d93ff96fbbf534dc",
+    "suggested_books.csv": "f431191ffb753733ba8fbffc800e90508ecf9867dfc912a16a420302d495a94c"
+  },
+  "admitted_snapshot": {
+    "LICENSE": "278c0c447ae8be6d5e6b745f064cfc8672bdb36672a22df5d981fa1fc2443967",
+    "models.py": "c13c4f0506c0a98d20726a0cfeec4323fbf2849a83734f491053553112f314fb",
+    "app.py": "11ce7ccdeebe9e26d6e51e164ab93ad4f1e4a19e1dde561d81e168a12d9ceb75",
+    "README.md": "f88f67c796f19ffe2ab6588e92e663f5017b2bc70698d90d4da7eeb3fbcb7b9d"
+  },
+  "counts": {
+    "files": 4,
+    "codeFiles": 2,
+    "routes": 0,
+    "modules": 5,
+    "unassigned": 0,
+    "flows": 1,
+    "tour": 4
+  },
+  "artifacts": {
+    "check_freshness.py": "1ae338eb0a8e6d9f96994b72b93dc07022f221c412ab55b264bc0105c6e164a3",
+    "generator.json": "04edcc596cf52a21813e117f01c84aac12d29cfe100ac81d10bf0f153efc349b",
+    "source-census.json": "e32d411487b6136306cb5da1c0c7a1987903bb090a6fc1f58e4c62a135c9f7a8",
+    "architecture.json": "a2ec30c61234affffa212e5f85aca38ef3e359b24be692d39d72b18c5a0a5164",
+    "NOTICE.md": "1b961d21b4feedd4af9be96ea51dd05d1f7cf45304ab4fe88d95ba0cebeada2f",
+    "index.html": "02d5f7130eda15dadfcc8e88137f53a67480c7d4ea0764d48648e79dcfda8bea",
+    "README.md": "ba9ce2c1d1d8a37f8b82d8dd7a5227519f1a41363b2c8a7b094c5dfb7ac69d31",
+    "descriptions/reviewed.json": "55c4f6a2ca3c477cb7b23aecc03b700e83dc6db62a1faba530426286d4cea14b",
+    "tests/test_freshness.py": "94a5f53967231f5a9f5228de7a8dc9811f4bf2dc8459c8e24781430bf64c30f7",
+    "licenses/inter-LICENSE.txt": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+    "licenses/elkjs-LICENSE.md": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617",
+    "licenses/LICENSE": "65a06a9dab105cd5a2b713a41a020a442bd431e6e19631182ed3889fd1672faf",
+    "licenses/jetbrains-mono-LICENSE.txt": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+    "licenses/source/LICENSE": "278c0c447ae8be6d5e6b745f064cfc8672bdb36672a22df5d981fa1fc2443967"
+  }
+}
