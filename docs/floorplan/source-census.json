@@ -1,0 +1,60 @@
+{
+  "source_commit": "6d03f8edebd32fbf35406c58bc80f4ad16b45bbe",
+  "tracked_regular_files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "bytes": 95
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "bytes": 1063
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 311
+    },
+    {
+      "path": "app.py",
+      "mode": "100644",
+      "bytes": 7896
+    },
+    {
+      "path": "models.py",
+      "mode": "100644",
+      "bytes": 726
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "bytes": 76
+    },
+    {
+      "path": "suggested_books.csv",
+      "mode": "100644",
+      "bytes": 603
+    }
+  ],
+  "admission_omissions": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "bytes": 95
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "bytes": 76
+    },
+    {
+      "path": "suggested_books.csv",
+      "mode": "100644",
+      "bytes": 603
+    }
+  ],
+  "application_code_coverage": "All application Python/JS/CSS/HTML source admitted; input CSV data and dependency/development metadata are explicit outside boundaries.",
+  "route_review": "No HTTP router in CLI source.",
+  "original_license_unchanged": true
+}

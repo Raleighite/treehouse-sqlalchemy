@@ -1,0 +1,147 @@
+{
+  "$schema": "floorplan/architecture@1",
+  "audience": "everyone",
+  "project": {
+    "name": "treehouse-sqlalchemy",
+    "summary": "A terminal books catalog imports suggested titles into SQLite, adds or lists books, edits/deletes a selected ID and reports catalog statistics. No HTTP routes.",
+    "entrypoints": [
+      "app.py"
+    ]
+  },
+  "include": [
+    "code",
+    "config",
+    "data",
+    "docs",
+    "other"
+  ],
+  "nodes": [
+    {
+      "id": "cli",
+      "label": "Book catalog menus",
+      "summary": "Main menu dispatches add, list, search, analysis and exit; selected books expose edit/delete.",
+      "paths": [
+        "app.py"
+      ],
+      "kind": "service"
+    },
+    {
+      "id": "model",
+      "label": "Book schema and session",
+      "summary": "Book stores title, author, date and integer-cent price on a SQLite-backed session.",
+      "paths": [
+        "models.py"
+      ],
+      "kind": "service"
+    },
+    {
+      "id": "csv",
+      "label": "Suggested-books CSV",
+      "summary": "Startup imports missing titles from a CSV; its record values are outside this map.",
+      "paths": [],
+      "kind": "external"
+    },
+    {
+      "id": "db",
+      "label": "Local SQLite catalog",
+      "summary": "Session queries and commits persist the catalog; actual database records are excluded.",
+      "paths": [],
+      "kind": "external"
+    },
+    {
+      "id": "reference",
+      "label": "Project reference and license",
+      "summary": "Original course documentation and any upstream license remain separate from executable processing.",
+      "paths": [
+        "LICENSE",
+        "README.md"
+      ],
+      "kind": "service"
+    }
+  ],
+  "edges": [
+    {
+      "from": "csv",
+      "to": "cli",
+      "label": "Normalize dates and prices, then create Book objects.",
+      "kind": "data"
+    },
+    {
+      "from": "cli",
+      "to": "model",
+      "label": "Use the Book mapping and shared session.",
+      "kind": "data"
+    },
+    {
+      "from": "model",
+      "to": "db",
+      "label": "Commit imported or manually added books.",
+      "kind": "data"
+    },
+    {
+      "from": "db",
+      "to": "cli",
+      "label": "List books or choose an ID",
+      "kind": "data"
+    }
+  ],
+  "flows": [
+    {
+      "id": "main",
+      "title": "Follow the terminal processing path",
+      "steps": [
+        {
+          "node": "csv",
+          "note": "At startup read suggested books and skip existing titles."
+        },
+        {
+          "node": "cli",
+          "note": "Normalize dates and prices, then create Book objects."
+        },
+        {
+          "node": "model",
+          "note": "Use the Book mapping and shared session."
+        },
+        {
+          "node": "db",
+          "note": "Commit imported or manually added books."
+        },
+        {
+          "node": "cli",
+          "note": "List books or choose an ID; edit/delete commits changes and analysis counts catalog rows."
+        }
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "node": "cli",
+      "title": "Book catalog menus",
+      "note": "Main menu dispatches add, list, search, analysis and exit; selected books expose edit/delete."
+    },
+    {
+      "node": "model",
+      "title": "Book schema and session",
+      "note": "Book stores title, author, date and integer-cent price on a SQLite-backed session."
+    },
+    {
+      "node": "csv",
+      "title": "Suggested-books CSV",
+      "note": "Startup imports missing titles from a CSV; its record values are outside this map."
+    },
+    {
+      "node": "db",
+      "title": "Local SQLite catalog",
+      "note": "Session queries and commits persist the catalog; actual database records are excluded."
+    }
+  ],
+  "annotations": [
+    {
+      "path": "app.py",
+      "note": "CSV seed records and runtime database are outside the admitted graph. This is a CLI, not Flask despite app.py naming. Input parsing, empty-catalog analysis and dependency compatibility are not runtime-qualified.",
+      "tags": [
+        "hotspot"
+      ]
+    }
+  ]
+}
